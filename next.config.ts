@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: "export",
@@ -7,8 +9,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: "/portfolio",
-  assetPrefix: "/portfolio/"
+  basePath: isProd ? "/portfolio" : undefined,
+  assetPrefix: isProd ? "/portfolio/" : undefined
 };
 
 export default nextConfig;

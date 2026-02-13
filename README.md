@@ -4,16 +4,9 @@
 
 DUO-portfolio in Next.js (App Router) voor Jorrick + Wesley, met expliciete rolverdeling per project, accountability matrix en gekoppelde devlogs.
 
-## Pages
-- `/`
-- `/projects`
-- `/projects/[slug]`
-- `/devlog/[slug]`
-- `/team-model`
-- `/people/jorrick`
-- `/people/wesley`
-- `/about`
-- `/contact`
+## Routes
+- `/` (single-page sections: hero, projects, team model, people, devlogs, contact)
+- `/devlog/[slug]` (standalone devlog detail pages)
 
 ## Setup
 ```bash
@@ -32,16 +25,21 @@ npm run build
 - Projectdata: `content/projects.json`
 - Devlogs: `content/devlog/*.md`
 
-Verplichte projectcards in de grid:
-- Nova Notes
-- Nova Orchestrator
-- Content Pipeline
-- Web Delivery Stack
-- Portfolio
+## GitHub Pages Deploy
+This project is configured for static export to GitHub Pages at:
+`https://jorricklazeroms.github.io/portfolio/`
 
-## Deploy
-Vercel (aanbevolen):
-1. Koppel deze map als project.
-2. Build command: `npm run build`
-3. Output: standaard Next.js output
-4. Zet environment vars alleen indien nodig (nu geen verplicht).
+1. In GitHub, open `Settings` → `Pages`.
+2. Set `Source` to `GitHub Actions`.
+3. Push to `main`.
+4. Open the `Actions` tab and wait for workflow `Deploy to GitHub Pages` to finish.
+5. Open the live site at `https://jorricklazeroms.github.io/portfolio/`.
+
+### Local verification
+```bash
+npm ci
+npm run lint
+npm test
+npm run build
+test -f out/index.html && echo "out/index.html exists"
+```
