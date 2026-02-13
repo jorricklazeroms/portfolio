@@ -1,0 +1,380 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./app/globals.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --muted: #5f5f5f;
+  --line: #d8d8d8;
+  --soft: #f7f7f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+}
+
+.shell {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.94);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.main-content {
+  padding-top: 1.8rem;
+  padding-bottom: 3.5rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-wrap {
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  padding: 0.45rem;
+  width: 40px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--fg);
+}
+
+.hamburger span + span {
+  margin-top: 5px;
+}
+
+.nav-link {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--muted);
+  padding: 0.4rem 0.65rem;
+  border-radius: 999px;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  background: var(--soft);
+  color: var(--fg);
+  outline: none;
+}
+
+.nav-link.is-active {
+  color: var(--fg);
+  background: #f0f0f0;
+}
+
+.section {
+  padding-top: 2.2rem;
+  padding-bottom: 2.2rem;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 92px;
+}
+
+.section-hero {
+  border-top: 0;
+  padding-top: 0.2rem;
+}
+
+.section-head {
+  margin-bottom: 1.15rem;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.9rem);
+  margin-top: 0.5rem;
+}
+
+h2 {
+  font-size: clamp(1.35rem, 3vw, 2rem);
+}
+
+h3 {
+  font-size: 1.03rem;
+}
+
+p {
+  margin-top: 0.7rem;
+  margin-bottom: 0;
+}
+
+.lead {
+  max-width: 760px;
+  color: #333333;
+  font-size: 1.1rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.card-grid,
+.split-grid,
+.accordion-grid,
+.role-grid {
+  display: grid;
+  grid-gap: 0.95rem;
+  gap: 0.95rem;
+}
+
+.card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.split-grid,
+.role-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card,
+.project-item,
+.role-card {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 1rem;
+}
+
+.project-item {
+  padding: 0;
+}
+
+.project-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.2rem;
+  font-weight: 650;
+}
+
+.project-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-item summary::after {
+  content: "+";
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+.project-item[open] summary::after {
+  content: "-";
+}
+
+.project-item[open] summary {
+  border-bottom: 1px solid var(--line);
+}
+
+.project-item summary:hover,
+.project-item summary:focus-visible {
+  background: var(--soft);
+  outline: none;
+}
+
+.project-content {
+  display: grid;
+  grid-gap: 1rem;
+  gap: 1rem;
+  padding: 1.2rem;
+}
+
+.project-content p {
+  margin-top: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.45rem;
+}
+
+.tag {
+  border: 1px solid var(--line);
+  padding: 0.16rem 0.45rem;
+  font-size: 0.8rem;
+}
+
+.quality-gates ul {
+  margin: 0.45rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.quality-gates li {
+  margin-top: 0.2rem;
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.86em;
+}
+
+.screenshot-wrap {
+  margin-top: 0.95rem;
+}
+
+.screenshot {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
+
+.link-row {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid var(--fg);
+  padding: 0.4rem 0.72rem;
+  font-size: 0.88rem;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--fg);
+  color: #ffffff;
+  outline: none;
+}
+
+.section-legacy,
+.section-devlog {
+  max-width: 760px;
+}
+
+.prose {
+  margin-top: 1.2rem;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.2rem;
+}
+
+.prose a {
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .header {
+    position: static;
+    align-items: flex-start;
+  }
+
+  .nav-wrap {
+    width: 100%;
+  }
+
+  .hamburger {
+    display: inline-block;
+  }
+
+  .nav {
+    display: none;
+    margin-top: 0.6rem;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .nav.nav-open {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 0;
+  }
+
+  .section {
+    scroll-margin-top: 20px;
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem;
+  }
+
+  .main-content {
+    padding-top: 1rem;
+  }
+}
+

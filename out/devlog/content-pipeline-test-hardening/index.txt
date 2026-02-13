@@ -1,0 +1,56 @@
+1:"$Sreact.fragment"
+2:I[2619,["619","static/chunks/619-ba102abea3e3d0e4.js","120","static/chunks/app/devlog/%5Bslug%5D/page-1dc6262ed808a064.js"],""]
+3:I[8225,["619","static/chunks/619-ba102abea3e3d0e4.js","177","static/chunks/app/layout-f12d313df4ddbb03.js"],"default"]
+4:I[9766,[],""]
+5:I[8924,[],""]
+7:I[4431,[],"OutletBoundary"]
+9:I[5278,[],"AsyncMetadataOutlet"]
+b:I[4431,[],"ViewportBoundary"]
+d:I[4431,[],"MetadataBoundary"]
+e:"$Sreact.suspense"
+10:I[7150,[],""]
+:HL["/portfolio/_next/static/css/930195c9435f10ff.css","style"]
+0:{"P":null,"b":"5sOAe4dZ3Z_ioVshbAR91","p":"/portfolio","c":["","devlog","content-pipeline-test-hardening",""],"i":false,"f":[[["",{"children":["devlog",{"children":[["slug","content-pipeline-test-hardening","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/portfolio/_next/static/css/930195c9435f10ff.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":[["$","header",null,{"className":"shell header","children":[["$","$L2",null,{"href":"/","className":"brand","children":"Jorrick + Wesley"}],["$","nav",null,{"children":["$","$L3",null,{}]}]]}],["$","main",null,{"className":"shell main-content","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","section",null,{"className":"section section-legacy","children":[["$","h1",null,{"children":"Page not found"}],["$","p",null,{"className":"muted","children":"The page you requested does not exist."}],["$","div",null,{"className":"link-row","children":[["$","$L2",null,{"href":"/","children":"Home"}],["$","$L2",null,{"href":"/#projects","children":"Projects"}]]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]}]]}],{"children":["devlog",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","content-pipeline-test-hardening","d"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L6",null,["$","$L7",null,{"children":["$L8",["$","$L9",null,{"promise":"$@a"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Lb",null,{"children":"$Lc"}],null],["$","$Ld",null,{"children":["$","div",null,{"hidden":true,"children":["$","$e",null,{"fallback":null,"children":"$Lf"}]}]}]]}],false]],"m":"$undefined","G":["$10",[]],"s":false,"S":true}
+11:T5f9,<h2>Problem</h2>
+<p>De pipeline werkte voor happy-path input, maar regressies rond schemafouten en transformatie-edge-cases waren te kwetsbaar.</p>
+<h2>Constraints</h2>
+<ul>
+<li>Tool moest lichtgewicht blijven.</li>
+<li>Invoercontracten moesten eenvoudig blijven voor redactiewerk.</li>
+<li>Testdekking moest omhoog zonder de buildtijd sterk te verhogen.</li>
+</ul>
+<h2>Solution</h2>
+<p>We hebben gerichte regressietests toegevoegd voor foutpaden, schema-inconsistenties en output-validatie. Daarmee detecteren we defects eerder in de ontwikkelcyclus.</p>
+<h2>Architecture</h2>
+<ul>
+<li>CLI-entrypoint in <code>mini_content_pipeline/cli.py</code>.</li>
+<li>Pipeline-logica in <code>mini_content_pipeline/pipeline.py</code>.</li>
+<li>Testmix: <code>tests/test_pipeline.py</code> en <code>tests/test_smoke.py</code>.</li>
+</ul>
+<h2>Collaboration Model</h2>
+<ul>
+<li>Technical Owner: Jorrick</li>
+<li>Supporting Engineer: Wesley</li>
+<li>Reviewer: Jorrick</li>
+<li>QA Owner: Wesley</li>
+</ul>
+<h2>Testing and Quality Gates</h2>
+<ul>
+<li>Python gates: <code>pytest</code>, <code>ruff check</code>.</li>
+<li>Contractchecks op input/output schema's.</li>
+<li>CI-doel: regressietests verplicht groen bij elke wijziging.</li>
+</ul>
+<h2>Next Steps</h2>
+<ul>
+<li>Testdata uitbreiden met grotere contentsets.</li>
+<li>Rapportage verbeteren met helderdere foutcontext.</li>
+<li>Performance-baseline opnemen voor grotere batches.</li>
+</ul>
+<h2>Links</h2>
+<ul>
+<li>Repo: <a href="../mini-content-pipeline">mini-content-pipeline</a></li>
+</ul>6:["$","article",null,{"className":"section section-devlog","children":[["$","p",null,{"className":"eyebrow","children":"Devlog Entry"}],["$","h1",null,{"children":"Mini Content Pipeline v0.1: test hardening"}],["$","p",null,{"className":"muted","children":["2026-02-08"," · ","Content Pipeline"]}],["$","p",null,{"children":"Testset uitgebreid met transformatie- en schemafoutscenario's voor stabielere builds."}],["$","ul",null,{"className":"tags","children":[["$","li","pipeline",{"className":"tag","children":"pipeline"}],["$","li","tests",{"className":"tag","children":"tests"}],["$","li","content",{"className":"tag","children":"content"}],["$","li","python",{"className":"tag","children":"python"}]]}],["$","section",null,{"className":"prose","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","p",null,{"children":["$","$L2",null,{"href":"/#devlogs","className":"button","children":"Back to Devlogs"}]}]]}]
+c:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+8:null
+a:{"metadata":[["$","title","0",{"children":"Jorrick + Wesley Portfolio"}],["$","meta","1",{"name":"description","content":"Single-page duo portfolio with expandable projects and devlogs"}]],"error":null,"digest":"$undefined"}
+f:"$a:metadata"

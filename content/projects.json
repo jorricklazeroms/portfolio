@@ -1,0 +1,99 @@
+[
+  {
+    "name": "Portfolio",
+    "slug": "portfolio",
+    "repo_url": "https://github.com/jorricklazeroms/portfolio",
+    "type": "react",
+    "short_summary": "Next.js portfolio rebuilt as a static-first single page with structured project metadata and linked devlogs.",
+    "tags": ["nextjs", "typescript", "static-export"],
+    "roles": {
+      "jorrick": "Architecture, routing, and deployment",
+      "wesley": "Quality gates, content review, and release validation"
+    },
+    "screenshot_path": "/screenshots/desktop.png",
+    "quality_gates": ["npm run lint", "npm test", "npm run build"],
+    "devlog_slug": "portfolio-app-router-foundation"
+  },
+  {
+    "name": "Static Site Demo",
+    "slug": "static-site-demo",
+    "repo_url": "https://github.com/jorricklazeroms/static-site-demo",
+    "type": "static",
+    "short_summary": "A lightweight static delivery track focused on reliability, speed, and simple handoff.",
+    "tags": ["html", "css", "accessibility"],
+    "roles": {
+      "jorrick": "Structure and deployment automation",
+      "wesley": "Visual QA and content consistency"
+    },
+    "quality_gates": ["npm run lint", "npm test", "npm run build"]
+  },
+  {
+    "name": "React Dashboard Demo",
+    "slug": "react-dashboard-demo",
+    "repo_url": "https://github.com/jorricklazeroms/react-dashboard-demo",
+    "type": "react",
+    "short_summary": "Component-driven dashboard patterns with typed state flow and reusable UI blocks.",
+    "tags": ["react", "typescript", "ui"],
+    "roles": {
+      "jorrick": "Component architecture and performance",
+      "wesley": "Test scenarios and UX quality checks"
+    },
+    "quality_gates": ["npm run lint", "npm test", "npm run build"]
+  },
+  {
+    "name": "WordPress Theme Demo",
+    "slug": "wp-theme-demo",
+    "repo_url": "https://github.com/jorricklazeroms/wp-theme-demo",
+    "type": "wordpress",
+    "short_summary": "Custom WordPress theme path for CMS-driven pages with clean editorial workflow.",
+    "tags": ["wordpress", "php", "gutenberg"],
+    "roles": {
+      "jorrick": "Theme integration and release packaging",
+      "wesley": "Theme QA and editor experience"
+    },
+    "quality_gates": ["npm run lint", "npm test", "npm run build"],
+    "devlog_slug": "web-delivery-stack-wordpress-focus"
+  },
+  {
+    "name": "Nova Notes",
+    "slug": "nova-notes",
+    "repo_url": "https://github.com/jorricklazeroms/nova-notes",
+    "type": "python",
+    "short_summary": "CLI notes workflow with tagging and fast lookup for daily engineering context.",
+    "tags": ["python", "cli", "productivity"],
+    "roles": {
+      "jorrick": "Core CLI architecture",
+      "wesley": "Regression tests and release checks"
+    },
+    "quality_gates": ["ruff check", "pytest", "python -m build"],
+    "devlog_slug": "nova-notes-first-pass"
+  },
+  {
+    "name": "Nova Orchestrator",
+    "slug": "nova-orchestrator",
+    "repo_url": "https://github.com/jorricklazeroms/nova-orchestrator",
+    "type": "python",
+    "short_summary": "Pipeline orchestration tooling for repeatable task execution and run visibility.",
+    "tags": ["python", "automation", "orchestration"],
+    "roles": {
+      "jorrick": "Pipeline contracts and diagnostics",
+      "wesley": "Validation gates and operational QA"
+    },
+    "quality_gates": ["ruff check", "pytest", "python -m build"],
+    "devlog_slug": "orchestrator-quality-gates"
+  },
+  {
+    "name": "Mini Content Pipeline",
+    "slug": "mini-content-pipeline",
+    "repo_url": "https://github.com/jorricklazeroms/mini-content-pipeline",
+    "type": "python",
+    "short_summary": "Structured content transforms with schema checks for predictable publishing output.",
+    "tags": ["python", "content", "data"],
+    "roles": {
+      "jorrick": "Data contracts and transform design",
+      "wesley": "Test coverage and failure handling"
+    },
+    "quality_gates": ["ruff check", "pytest", "python -m build"],
+    "devlog_slug": "content-pipeline-test-hardening"
+  }
+]
